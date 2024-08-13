@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Page</title>
+    <link rel="stylesheet" href="skills.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Horizontal Header -->
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li class="dropdown">
+                <a href="skills.html" class="dropbtn">Skills</a>
+                <div class="dropdown-content">
+                    <a href="#">Music</a>
+                    <a href="#">Graphic Design</a>
+                    <a href="#">Programming</a>
+                </div>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!-- Vertical Navigation Bar -->
+        <nav class="vertical-nav">
+            <ul>
+                <li><a href="#music" onclick="showSection('music-projects')">> Music <span class="cursor">|</span></a></li>
+                <li><a href="#coding" onclick="showSection('coding-projects')">> Coding <span class="cursor">|</span></a></li>
+                <li><a href="#design" onclick="showSection('design-projects')">> Art <span class="cursor">|</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main>
+            <!-- Music Projects Section -->
+            <section id="music-projects" class="project-section">
+                <h2>Music Projects</h2>
+                <div class="project-list">
+                    <!-- Project Template -->
+                    <div class="project-item">
+                        <img src="images/music/toshi.png" alt="Project Image">
+                        <div class="project-info">
+                            <h3>xXx_T0SHIII_xXx</h3>
+                            <p>My most exciting and current music project</p>
+                            <a href="http://project-url.com">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Copy and paste this block for more projects -->
+                    <div class="project-item">
+                        <img src="images/music/euphobia.jpg" alt="Project Image">
+                        <div class="project-info">
+                            <h3>Euphobia</h3>
+                            <p>Metal Band I used to make music within.</p>
+                            <a href="http://project-url.com">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/music/TWY.png" alt="Project Image">
+                        <div class="project-info">
+                            <h3>The Wrecked Youth</h3>
+                            <p>Indie Duo I was apart of. This is the story...</p>
+                            <a href="http://project-url.com">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coding Projects Section -->
+            <section id="coding-projects" class="project-section">
+                <h2>Coding Projects</h2>
+                <div class="project-list">
+                    <!-- Project Template -->
+                    <div class="project-item">
+                        <img src="images/code/website.jpg" alt="Project Image">
+                        <div class="project-info">
+                            <h3>This Website</h3>
+                            <p>The Journey of coding this website mostly within one night.</p>
+                            <a href="http://project-url.com">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Graphic Design Projects Section -->
+            <section id="design-projects" class="project-section">
+                <h2>Graphic Design Projects</h2>
+                <div class="project-list">
+                    <!-- Project Template -->
+                    <div class="project-item">
+                        <img src="images/index/project1.png" alt="Project Image">
+                        <div class="project-info">
+                            <h3>Skies00 Streetwear Brand</h3>
+                            <p>Streetwear clothing brand I created all the assets for.</p>
+                            <a href="Projects/ClothingBrand/profile.html">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Copy and paste this block for more projects -->
+                    <div class="project-item">
+                        <img src="images/index/project_2.png" alt="Project Image">
+                        <div class="project-info">
+                            <h3>Cannabis Ad Mockups</h3>
+                            <p>Ads that I modeled and textured in 3D using Blender.</p>
+                            <a href="Projects/CannabisAd/profile.html">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/index/project3.png" alt="Project Image">
+                        <div class="project-info">
+                            <h3>Logo Designs</h3>
+                            <p>Various Logo designs I created over the years for myself and others</p>
+                            <a href="Projects/Logos/profile.html">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <a class="optfooter" href="index.html">Home</a>
+        <a class="optfooter" href="about.html">About</a>
+        <a class="optfooter" href="resume.html">Resume</a>
+        <a class="optfooter" href="skills.html">Skills</a>
+        <a class="optfooter" href="blog.html">Blog</a>
+        <a class="optfooter" href="contact.html">Contact</a>
+    </footer>
+
+    <script src="skills.js"></script>
+</body>
+</html>

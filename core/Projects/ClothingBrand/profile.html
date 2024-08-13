@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skies00 Streetwear Brand Project Profile</title>
+    <link rel="stylesheet" href="../project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../resume.html">Resume</a></li>
+            <li class="dropdown">
+                <a href="../../skills.html" class="dropbtn">Skills</a>
+                <div class="dropdown-content">
+                    <a href="#">Music</a>
+                    <a href="#">Graphic Design</a>
+                    <a href="#">Programming</a>
+                </div>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="projectProfileContainer">
+        <div class="bgcontain">
+            <h1 class="projectTitle">Skies00 Streetwear Brand
+                <span class="cursor">|</span>
+            </h1>
+
+            <div class="carouselContainer">
+                <div class="carousel">
+                    <img src="Images/image1.png" alt="Project Image 1" class="carouselImage">
+                    <img src="Images/image2.png" alt="Project Image 2" class="carouselImage">
+                </div>
+            </div>
+
+            <div class="projectDetails">
+                <h2>Project Overview<span class="cursor">|</span></h2>
+                <p><strong>Date:</strong> August 9, 2024</p>
+                <p><strong>Objective:</strong> A brief description of the project's purpose, what challenges it aimed to address, and what inspired its creation.</p>
+
+                <h2>Significant Contributions<span class="cursor">|</span></h2>
+                <p>Explain the key contributions made during the project. Highlight any innovative approaches, technologies used, or specific challenges overcome. Describe how these elements contributed to the success of the project.</p>
+
+                <h2>Motivation Behind the Project<span class="cursor">|</span></h2>
+                <p>Discuss the reasoning and inspiration behind the project. What needs or gaps were identified? What personal or professional goals were achieved through this project? Describe the impact or value it aimed to create.</p>
+
+                <h2>Development Process<span class="cursor">|</span></h2>
+                <p>Detail the approach taken to complete the project. Outline the steps, methodologies, and tools used. Provide insights into the problem-solving strategies and the workflow that led to the project's completion.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a class="optfooter" href="../../index.html">Home</a>
+        <a class="optfooter" href="../../about.html">About</a>
+        <a class="optfooter" href="../../resume.html">Resume</a>
+        <a class="optfooter" href="../../skills.html">Skills</a>
+        <a class="optfooter" href="../../blog.html">Blog</a>
+        <a class="optfooter" href="../../contact.html">Contact</a>
+    </footer>
+
+    <script>// Simple Carousel Script
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("carouselImage");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 10 seconds
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            slideIndex -= 2;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            showSlides();
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            showSlides();
+        });</script>
+</body>
+</html>

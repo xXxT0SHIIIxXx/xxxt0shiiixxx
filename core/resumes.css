@@ -1,0 +1,293 @@
+/* Global Styles */
+body {
+    text-align: center;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f1f1f;
+    padding: 1px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header ul li a:hover {
+    background-color: #00c4ff;
+    color: #121212;
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin: 5px 0px;
+    background-color: #1f1f1f;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #00c4ff;
+    color: #121212;
+}
+
+/* Resume Styles */
+.resumeContainer {
+    padding: 10px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+}
+
+.bgcontain {
+    padding: 20px;
+    margin: 5% auto;
+    text-align: left;
+    font-size: 1.2em;
+    border-radius: 20px;
+    background-color: #1f1f1f;
+    max-width: 800px;
+}
+
+.sectionTitle {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    animation: typing 10s steps(100, end);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 3vh;
+    animation: typing 4s steps(60, end);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration:underline;
+}
+
+p, ul {
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+.job, .degree, .certifications {
+    margin-bottom: 20px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+    footer a {
+        text-decoration: none;
+        color: #00c4ff;
+        margin: 0 10px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+@media (max-width: 480px) {
+
+    /* Global Styles */
+    body {
+        text-align: center;
+        padding: 0;
+        font-family: "Pixelify Sans", sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: #1f1f1f;
+        padding: 20px 4px 20px 4px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        font-size: 0.7rem;
+    }
+
+        header ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            header ul li {
+                display: inline-block;
+                margin: 0 0px;
+                position: relative;
+            }
+
+                header ul li a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-weight: bold;
+                    padding: 10px;
+                    font-size: 1em;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                    header ul li a:hover {
+                        background-color: #00c4ff;
+                        color: #121212;
+                        border-radius: 5px;
+                    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin: 5px 0px;
+        background-color: #1f1f1f;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        z-index: 1;
+        width: 150px;
+    }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #ffffff;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ffffff;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #00c4ff;
+        color: #121212;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #1f1f1f;
+        text-align: center;
+        padding: 20px 0;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #00c4ff;
+        margin: 0 10px;
+        font-weight: bold;
+        font-size: .7rem;
+        transition: color 0.3s;
+    }
+
+    footer a:hover {
+        color: #ffffff;
+    }
+}
+
+.cursor {
+    animation: blink .6s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}
