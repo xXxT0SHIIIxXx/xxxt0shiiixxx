@@ -152,7 +152,7 @@ header ul li a:hover {
 }
 
     .projectDetails h2 {
-        font-size: 2em;
+        font-size: 4vh;
         color: #00c4ff;
         margin-top: 10px;
         animation: typing 10s steps(100, end);
