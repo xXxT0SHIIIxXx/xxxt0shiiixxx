@@ -1,130 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home of the Duff!</title>
-</head>
+    <head>
+        <title>Our Funky HTML Page</title>
+        <meta name="description" content="Our first page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="utils.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    </head>
 
     <body>
-        <header>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="dropdown">
-                    <a href="skills.html" class="dropbtn">Skills</a>
-                    <div class="dropdown-content">
-                        <a href="#">Music</a>
-                        <a href="#">Graphic Design</a>
-                        <a href="#">Programming</a>
-                    </div>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <header class="nav nav--top bgcol__primary">
+            <a class="Text__nav Text__nav--top bgcol__primary col__primary" href="index.html">Home</a>
+            <a class="Text__nav Text__nav--top bgcol__primary col__primary" href="about.html">About</a>
+            <a class="Text__nav Text__nav--top bgcol__primary col__primary" href="skills.html">Projects</a>
+            <a class="Text__nav Text__nav--top bgcol__primary col__primary" href="blog.html">Blog</a>
+            <a class="Text__nav Text__nav--top bgcol__primary col__primary" href="contact.html">Contact</a>
         </header>
-        <article class="aboutContainer">
-            <div class="bgcontain">
-                <h2>
-                    Hello, I'm Chase Duffman
-                    <span class="cursor">|</span>
-                </h2>
-                <h3>
-                    I write code, make music, and do graphic design! I'm always looking to challenge myself
-                    and try new things. Infact, I coded this entire website from scratch by myself to show you my work!
-                </h3>
-                <h3>
-                    I like to take deep dives into computer architecture and walks in technical art. Coding Shaders, Building 3D renderers,
-                    Synthesizing musical instruments, and much more!
-                </h3>
-            </div>
-        </article>
-        <!--Project Contains -->
-        <h1 class="sectionTitle">Previous Projects
-            <span class="cursor">|</span>
-        </h1>
-        <article class="projectContainer">
-            <div class="Item">
-                <img src="images/index/project1.png" alt="Project 1 Thumbnail" height="600" />
-                <a class="ItemTitle" href="Projects/ClothingBrand/profile.html">Streetwear Brands (Skies00)</a>
-                <h3 class="ItemCaption">Streetwear clothing brand I created all the assets for.</h3>
-            </div>
-            <div class="Item">
-                <img src="images/index/project_2.png" alt="Project 2 Thumbnail" height="600" />
-                <a class="ItemTitle" href="Projects/ClothingBrand/profile.html">Cannabis Ad Mockups</a>
-                <h3 class="ItemCaption">Ads that I modeled and textured in 3D using Blender.</h3>
-            </div>
-            <div class="Item">
-                <img src="images/index/project3.png" alt="Project 3 Thumbnail" height="600" />
-                <a class="ItemTitle" href="Projects/ClothingBrand/profile.html">Logo Designs</a>
-                <h3 class="ItemCaption">Logo designs I created over the years for myself and others</h3>
-            </div>
-        </article>
-        <h1 class="sectionTitle">Current Stats
-            <span class="cursor">|</span>
-        </h1>
-        <article class="statContainer">
-            <div class="Stat">
-                <img class="StatImg" src="images/index/paint.png" alt="Project 1 Thumbnail" height="600" />
-                <h1 class="ItemTitle2">Art Created:</h1>
-                <h3 class="ItemCaption">1000</h3>
-                <h3 class="StatCaption"> Artworks</h3>
-            </div>
-            <div class="Stat">
-                <img class="StatImg" src="images/index/music2.png" alt="Project 1 Thumbnail" height="600" />
-                <h1 class="ItemTitle2">Music Created:</h1>
-                <h3 class="ItemCaption">1000</h3>
-                <h3 class="StatCaption">Beats</h3>
-            </div>
-            <div class="Stat">
-                <img class="StatImg" src="images/index/code.png" alt="Project 1 Thumbnail" height="600" />
-                <h1 class="ItemTitle2">Scripts coded:</h1>
-                <h3 class="ItemCaption">1000</h3>
-                <h3 class="StatCaption">Scripts</h3>
-            </div>
-            <div class="Stat">
-                <img class="StatImg" src="images/index/time.png" alt="Project 1 Thumbnail" height="600" />
-                <h1 class="ItemTitle2">Days Since Creating:</h1>
-                <h3 class="ItemCaption">0.00</h3>
-                <h3 class="StatCaption">Days</h3>
-            </div>
-        </article>
 
-        <h1 class="sectionTitle">Blog Posts
-            <span class="cursor">|</span>
-        </h1>
-        <article class="blogContainer">
-            <div class="Item">
-                <img src="images/code/website.jpg" alt="Project 1 Thumbnail" height="600" />
-                <a class="ItemTitle" href="BlogPosts/websiteBP.html">The Journey of this Website...</a>
-                <h3 class="ItemCaption">How this all came to be.</h3>
+        <section class="section bgcol__secondary bgImg">
+            <div class="aboutContainer frostedGlass">
+                <h2 class="aboutHeader txt__lg txt__center col__primary typed"> Hello, My name is</h2>
+                <h2 class="aboutHeader txt__lg txt__center col__primary typed">Chase Duffman<span class="cursor">|</span></h2>
+                <p class="aboutCaption txt__SMmed txt__center col__primary">I write code, make music, and do graphic design! I'm always looking to challenge myself and try new things. Infact, I coded this entire website from scratch by myself to show you my work!</p>
+                <p class="aboutCaption txt__SMmed txt__center col__primary">I like to take deep dives into computer architecture and walks in technical art. Coding Shaders, Building 3D renderers, Synthesizing musical instruments, and much more!</p>
             </div>
+         </section>
 
-            <div class="Item">
-                <img src="images/code/website.jpg" alt="Project 1 Thumbnail" height="600" />
-                <a class="ItemTitle" href="BlogPosts/websiteBP.html">The Journey of this Website...</a>
-                <h3 class="ItemCaption">How this all came to be.</h3>
-            </div>
+        <section class="section bgcol__secondary">
+           <h2 class="sectionHeader txt__lg col__primary txt__center typed">Previous Projects<span class="cursor">|</span></h2>
+                <div class="cardContainer">
+                    <div class="card bgcol__primary">
+                        <img class="cardImg"  src="Images/Index/project1.png"/>
+                        <a class="cardHeader txt__med col__primary txt__center txt_decor" href="Projects/ClothingBrand/profile.html">Skies00 Brand</a>
+                        <p class="cardCaption txt__sm col__secondary">Streetwear clothing brand I created all the assets for.</p>
+                    </div>
 
-            <div class="Item">
-                <img src="images/code/website.jpg" alt="Project 1 Thumbnail" height="600" />
-                <a class="ItemTitle" href="BlogPosts/websiteBP.html">The Journey of this Website...</a>
-                <h3 class="ItemCaption">How this all came to be.</h3>
-            </div>
+                    <div class="card bgcol__primary">
+                        <img class="cardImg"  src="Images/Index/project2.png"/>
+                        <a class="cardHeader txt__med col__primary txt__center txt_decor" href="Projects/CannabisAd/profile.html">Cannabis Ads</a>
+                        <p class="cardCaption txt__sm col__secondary">Ads that I modeled and textured in 3D using Blender.</p>
+                    </div>
 
-        </article>
+                    <div class="card bgcol__primary">
+                        <img class="cardImg" src="Images/Index/project3.png"/>
+                        <a class="cardHeader txt__med col__primary txt__center txt_decor" href="Projects/Logos/profile.html">Logo Designs</a>
+                        <p class="cardCaption txt__sm col__secondary">Logo designs I created over the years for myself and others</p>
+                    </div>
+                </div>
+        </section>
 
-        <footer>
-            <a class="optfooter" href="index.html">Home</a>
-            <a class="optfooter" href="about.html">About</a>
-            <a class="optfooter" href="resume.html">Resume</a>
-            <a class="optfooter" href="skills.html">Skills</a>
-            <a class="optfooter" href="blog.html">Blog</a>
-            <a class="optfooter" href="contact.html">Contact</a>
+        <section class="section bgcol__secondary">
+            <h2 class="sectionHeader txt__lg col__primary txt__center typed">Current Stats<span class="cursor">|</span></h2>
+                 <div class="cardContainer">
+                     <div class="card bgcol__primary">
+                         <img class="cardImg2"  src="Images/Index/paint.png"/>
+                         <h1 class="cardHeader txt__med col__primary txt__center">Art Created:</h1>
+                         <h1 class="cardHeader txt__med col__primary txt__center">1000</h1>
+                     </div>
+ 
+                     <div class="card bgcol__primary">
+                         <img class="cardImg2"  src="Images/Index/code.png"/>
+                         <h1 class="cardHeader txt__med col__primary txt__center">Scripts Created:</h1>
+                         <h1 class="cardHeader txt__med col__primary txt__center">1000</h1>
+                     </div>
+ 
+                     <div class="card bgcol__primary">
+                         <img class="cardImg2" src="Images/Index/music2.png"/>
+                         <h1 class="cardHeader txt__med col__primary txt__center">Music Created:</h1>
+                         <h1 class="cardHeader txt__med col__primary txt__center">1000</h1>
+                     </div>
+
+                     <div class="card bgcol__primary">
+                        <img class="cardImg2" src="Images/Index/time.png"/>
+                        <h1 class="cardHeader txt__med col__primary txt__center">Days Since Creating:</h1>
+                         <h1 class="cardHeader txt__med col__primary txt__center">0.0</h1>
+                    </div>
+                 </div>
+         </section>
+
+        <section class="section bgcol__secondary">
+            <h2 class="sectionHeader txt__lg col__primary txt__center typed">Blog Posts<span class="cursor">|</span></h2>
+                 <div class="cardContainer">
+                     <div class="card bgcol__primary">
+                         <img class="cardImg"  src="Images/Index/website.jpg"/>
+                         <a class="cardHeader txt__med col__primary txt__center txt_decor" href="BlogPosts/websiteBP.html">This Website...</h1>
+                         <p class="cardCaption col__secondary">How this all came to be.</p>
+                     </div>
+                    </div>
+                 </div>
+         </section>
+
+        <footer class="nav nav--bottom bgcol__primary">
+            <a class="Text__nav Text__nav--bottom bgcol__primary col__accent" href="index.html">Home</a>
+            <a class="Text__nav Text__nav--bottom bgcol__primary col__accent" href="about.html">About</a>
+            <a class="Text__nav Text__nav--bottom bgcol__primary col__accent" href="skills.html">Projects</a>
+            <a class="Text__nav Text__nav--bottom bgcol__primary col__accent" href="blog.html">Projects</a>
+            <a class="Text__nav Text__nav--bottom bgcol__primary col__accent" href="contact.html">Contact</a>
         </footer>
     </body>
 </html>

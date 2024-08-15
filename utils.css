@@ -1,0 +1,85 @@
+.bgcol__primary{
+    background-color: #1f1f1f;
+}
+
+.bgcol__secondary{
+    background-color: #121212;
+}
+
+.bgcol__third{
+    background-color: #393939;
+}
+
+.bgImg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/index/aboutbg2.png);
+}
+
+.frostedGlass{
+    border: solid;
+    background: rgba(31, 31, 31, 0.7);
+    border-color: rgba(61, 61, 61, 1);
+    backdrop-filter: blur(10px);
+}
+
+
+.bgcol__accent{
+    background-color: #0088ff;
+}
+
+.col__primary{
+    color: white;
+}
+
+.col__secondary{
+    color: #7a7a7a;
+}
+
+.col__accent{
+    color: #0088ff;
+}
+
+.txt__sm{
+    font-size: 1.4em;
+}
+
+.txt__med{
+    font-size: 2em;
+}
+
+.txt__SMmed{
+    font-size: 2em;
+}
+
+.txt__lg{
+    font-size: 4em;
+}
+
+.txt__center{
+    text-align:center;
+}
+
+.txt_decor{
+    text-decoration:none;
+}
+
+
+
+@media (max-width: 800px) {
+    .txt__sm{
+        font-size: 1.5em;
+    }
+
+    .txt__SMmed{
+        font-size: 1em;
+    }
+    
+    .txt__med{
+        font-size: 2em;
+    }
+    
+    .txt__lg{
+        font-size: 2.5em;
+    }
+  }
