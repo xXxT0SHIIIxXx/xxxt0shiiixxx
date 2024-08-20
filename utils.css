@@ -40,15 +40,15 @@
     color: #0088ff;
 }
 
+.txt__tny{
+    font-size: 0.8em;
+}
+
 .txt__sm{
     font-size: 1.4em;
 }
 
 .txt__med{
-    font-size: 2em;
-}
-
-.txt__SMmed{
     font-size: 2em;
 }
 
