@@ -23,6 +23,13 @@
     backdrop-filter: blur(.5em);
 }
 
+.txt__bold{
+    font-weight: 900;
+}
+
+.roundedBorder{
+    border-radius: 0.4em;
+}
 
 .bgcol__accent{
     background-color: #0088ff;
