@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reader for EZM</title>
+    <meta property="og:title" content="Reader for EZM" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../utils.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <meta name="description" content="An electric zine" />
+    <meta property="og:description" content="An electric zine" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./pages/FRONT.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./pages/FRONT.png" type="image/png" />
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            user-select: none;
+            perspective-origin: center;
+            perspective: 1000px;
+        }
+
+        li {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform-origin: center left;
+            transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        }
+
+        img {
+            position: absolute;
+            top: 5%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 90%;
+            height: 90%;
+            backface-visibility: hidden;
+            object-fit: contain;
+            object-position: center left;
+            transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        }
+
+        li:nth-child(even) img {
+            object-position: center right;
+        }
+
+        li.depth-0 img {
+            transform: translateZ(0) scaleX(1);
+        }
+
+        li:nth-child(even) img {
+            transform: translateZ(0) scaleX(-1);
+        }
+
+        li.depth-1 img {
+            transform: translateZ(-2px) scaleX(1);
+        }
+
+        li.depth-1:nth-child(even) img {
+            transform: translateZ(-2px) scaleX(-1);
+        }
+
+        li.depth-2 img {
+            transform: translateZ(-4px) scaleX(1);
+        }
+
+        li.depth-2:nth-child(even) img {
+            transform: translateZ(-4px) scaleX(-1);
+        }
+    </style>
+</head>
+
+<body class="bgcol__secondary">
+    <header class="nav nav--top bgcol__primary">
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../index.html">Home</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../about.html">About</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../skills.html">Projects</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../blog.html">Blog</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../contact.html">Contact</a>
+    </header>
+
+    <div class="section bgcol__secondary">
+        <<noscript>This electric zine requires javascript to be enabled.</noscript>
+        <div id="loading">loading zine...</div>
+        <script src="ezmreader.js"></script>
+    </div>
+</body>
+
+</html>
