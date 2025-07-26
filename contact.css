@@ -3,6 +3,8 @@
     padding: 50px 10%;
     padding-bottom: 100px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
     .contact h1 {
@@ -14,6 +16,11 @@
         overflow: hidden;
         white-space: nowrap;
     }
+
+p {
+    display: flex;
+    flex-direction: column;
+}
 
 .contact p {
     color: #bbbbbb;
