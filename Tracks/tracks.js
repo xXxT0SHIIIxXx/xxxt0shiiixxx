@@ -24,56 +24,56 @@ window.trackList = [
         "title":  "AllHailTheKing",
         "file":  "audio/AllHailTheKing.wav",
         "soundcloud":  "",
-        "cover":  "covers/MetalHeart_04.png",
+        "cover":  "covers/MetalHeart_04.webp",
         "description":  "Hype Trap beat with Horns"
     },
     {
         "title":  "ChillgrooveTypeshit",
         "file":  "audio/ChillgrooveTypeshit.wav",
         "soundcloud":  "",
-        "cover":  "covers/SmokeRender.png",
+        "cover":  "covers/SmokeRender.webp",
         "description":  "Lofi, Chill guitar vibe."
     },
     {
         "title":  "Lost Causes",
         "file":  "audio/DeepInside_Fm_85bpm _T0SHIII.wav",
         "soundcloud":  "",
-        "cover":  "covers/sadge.png",
+        "cover":  "covers/sadge.webp",
         "description":  "Sentimental, slow emo inspired instrumental."
     },
     {
         "title":  "DigiWrld",
         "file":  "audio/DigiPop_EbMaj_169_T0SHIII.wav",
         "soundcloud":  "",
-        "cover":  "covers/GlassBallz.png",
+        "cover":  "covers/GlassBallz.webp",
         "description":  "Hyperpop inspired Instrumental"
     },
     {
         "title":  "Forgotten...",
         "file":  "audio/dinger.wav",
         "soundcloud":  "",
-        "cover":  "covers/AbstractCubesSpheresDiscs.png",
+        "cover":  "covers/AbstractCubesSpheresDiscs.webp",
         "description":  "Trap beat, more 8bit retro inspired."
     },
     {
         "title":  "Orchestral Piano Maniac",
         "file":  "audio/OrchestralPianoManiac_BMaj_T0SHIII.wav",
         "soundcloud":  "",
-        "cover":  "covers/MetalHeart_05_LowQual.png",
+        "cover":  "covers/MetalHeart_05_LowQual.webp",
         "description":  "Breakcore mixed with Orchestral elements to create a unique groove."
     },
     {
         "title":  "Polite Rage",
         "file":  "audio/PoliteRagetypabeat.wav",
         "soundcloud":  "",
-        "cover":  "covers/MetalHeart_09.png",
+        "cover":  "covers/MetalHeart_09.webp",
         "description":  "Rage inspired trap instrumental."
     },
     {
         "title":  "Summer Night",
         "file":  "audio/Tresh.wav",
         "soundcloud":  "",
-        "cover":  "covers/Metalheart_10.png",
+        "cover":  "covers/Metalheart_10.webp",
         "description":  "Lo-fi inspired, Peaceful instrumental"
     }
 ];
