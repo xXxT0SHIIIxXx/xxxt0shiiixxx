@@ -3,21 +3,21 @@ window.trackList = [
         "title":  "",
         "file":  "",
         "soundcloud":  "https://soundcloud.com/sp00ked-mentions/anime-girl-prod-yusha-x-thislandis",
-        "cover":  "",
+        "cover":  "placeholder.png",
         "description":  "One of my favorite releases and most appreciated song."
     },
     {
         "title":  "",
         "file":  "",
         "soundcloud":  "https://soundcloud.com/sp00ked-mentions/wastemytime-feat-knivezzz",
-        "cover":  "",
+        "cover":  "placeholder.png",
         "description":  "Collaboration with 'knivezzz'. I produced the beat."
     },
     {
         "title":  "",
         "file":  "",
         "soundcloud":  "https://soundcloud.com/sp00ked-mentions/s4v3m3-prod-greyrock-dollategabeatz",
-        "cover":  "",
+        "cover":  "placeholder.png",
         "description":  "My latest song. Responsible for the mixing, mastering, and lyrics."
     },
     {
