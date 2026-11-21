@@ -1,0 +1,226 @@
+.trackGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 300px));
+    justify-content: center;
+    gap: 2em;
+    padding: 1em 0;
+}
+
+.trackCard{
+    width: 100%;
+    min-height: 0;
+}
+
+.trackCard__cover{
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #0d0d0d;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.trackCard__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: transform .6s var(--easeOut), filter .4s ease;
+}
+
+.trackCard:hover .trackCard__img{
+    transform: scale(1.05);
+}
+
+.trackCard--playing .trackCard__img{
+    filter: brightness(.6) saturate(1.2);
+}
+
+.trackCard__canvas{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.trackCard--playing .trackCard__canvas{
+    opacity: 1;
+}
+
+.trackCard__play{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    width: 4.2em;
+    height: 4.2em;
+    padding: 0;
+    border: 3px solid var(--glassBorder);
+    border-radius: 50%;
+    background: var(--glassBg);
+    -webkit-backdrop-filter: blur(.3em);
+    backdrop-filter: blur(.3em);
+    cursor: pointer;
+    z-index: 2;
+    transition: transform .3s var(--easeSpring), background-color .3s ease, opacity .3s ease;
+}
+
+.trackCard__play:hover{
+    background-color: var(--colAccent);
+    transform: scale(1.1);
+}
+
+.trackCard__play:active{
+    transform: scale(.92);
+}
+
+.trackCard--playing .trackCard__play{
+    opacity: 0;
+}
+
+.trackCard--playing:hover .trackCard__play, .trackCard--playing .trackCard__play:focus-visible{
+    opacity: 1;
+}
+
+.trackCard__icon{
+    width: 1.4em;
+    height: 1.4em;
+    margin-left: .2em;
+    background-color: var(--colPrimary);
+    clip-path: polygon(0 0, 50% 25%, 50% 75%, 0 100%, 0 0, 50% 25%, 100% 50%, 100% 50%, 50% 75%, 50% 25%);
+    transition: clip-path .3s var(--easeOut), margin .3s var(--easeOut);
+}
+
+.trackCard--playing .trackCard__icon{
+    margin-left: 0;
+    clip-path: polygon(0 0, 35% 0, 35% 100%, 0 100%, 0 0, 65% 0, 100% 0, 100% 100%, 65% 100%, 65% 0);
+}
+
+.trackCard--loading .trackCard__icon{
+    animation: iconPulse .8s ease-in-out infinite;
+}
+
+.trackCard__body{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: .4em;
+    padding: .8em 1em 1.1em;
+    text-align: center;
+}
+
+.trackCard__title{
+    margin: 0;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.trackCard__desc{
+    margin: 0;
+}
+
+.trackCard__desc:empty{
+    display: none;
+}
+
+.trackCard__controls{
+    display: flex;
+    align-items: center;
+    gap: .6em;
+    margin-top: auto;
+    padding-top: .4em;
+}
+
+.trackCard--soundcloud .trackCard__controls{
+    display: none;
+}
+
+.trackCard__time{
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.trackCard__seek{
+    flex: 1;
+    min-width: 0;
+    height: 1.2em;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    --progress: 0%;
+}
+
+.trackCard__seek::-webkit-slider-runnable-track{
+    height: .4em;
+    border-radius: 1em;
+    background: linear-gradient(to right, var(--colAccent) var(--progress), var(--bgThird) var(--progress));
+}
+
+.trackCard__seek::-moz-range-track{
+    height: .4em;
+    border-radius: 1em;
+    background: linear-gradient(to right, var(--colAccent) var(--progress), var(--bgThird) var(--progress));
+}
+
+.trackCard__seek::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: .9em;
+    height: .9em;
+    margin-top: -.25em;
+    border: none;
+    border-radius: 2px;
+    background: var(--colPrimary);
+    transition: transform .2s ease;
+}
+
+.trackCard__seek::-moz-range-thumb{
+    width: .9em;
+    height: .9em;
+    border: none;
+    border-radius: 2px;
+    background: var(--colPrimary);
+}
+
+.trackCard__seek:hover::-webkit-slider-thumb{
+    transform: scale(1.25);
+}
+
+.trackCard__seek:disabled{
+    cursor: default;
+    opacity: .5;
+}
+
+.trackCard__embed{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    z-index: 3;
+    animation: embedIn .4s var(--easeOut);
+}
+
+.musicEmpty{
+    margin: 2em 0;
+}
+
+@keyframes iconPulse{
+    50%{
+        opacity: .35;
+    }
+}
+
+@keyframes embedIn{
+    from{
+        opacity: 0;
+    }
+}

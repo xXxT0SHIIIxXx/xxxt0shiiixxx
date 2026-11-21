@@ -1,42 +1,93 @@
-.carouselContainer {
+.carouselContainer{
     position: relative;
     margin: 30px 0;
 }
 
-.carousel {
-    display: flex;
+.carousel{
+    display: grid;
     overflow: hidden;
     border-radius: 20px;
+    background-color: #0d0d0d;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    touch-action: pan-y;
 }
 
-.carouselImage {
-    min-width:100%;
-    height:50vh;
-    transition: opacity 1s ease-in-out;
-    display: none;
+.carouselImage{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: clamp(12rem, min(50vh, 80vw), 34rem);
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 1s ease-in-out, transform 6s ease-out;
 }
 
-    .carouselImage:first-child {
-        display: block;
-    }
+.carouselImage:first-child, .carouselImage--active{
+    opacity: 1;
+}
 
-.carouselControl {
+.carousel--ready .carouselImage:first-child:not(.carouselImage--active){
+    opacity: 0;
+}
+
+.carouselImage--active{
+    transform: scale(1);
+}
+
+.carouselControl{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    width: 2.6em;
+    height: 2.6em;
+    padding: 0;
+    font: inherit;
+    font-size: 1.1em;
     color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color .25s ease, transform .2s ease;
 }
 
-    .carouselControl.prev {
-        left: 10px;
-    }
+.carouselControl:hover{
+    background-color: var(--colAccent);
+}
 
-    .carouselControl.next {
-        right: 10px;
-    }
+.carouselControl:active{
+    transform: translateY(-50%) scale(.9);
+}
+
+.carouselControl--prev{
+    left: 10px;
+}
+
+.carouselControl--next{
+    right: 10px;
+}
+
+.carouselDots{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    margin-top: .8em;
+}
+
+.carouselDot{
+    width: .7em;
+    height: .7em;
+    padding: 0;
+    border: none;
+    border-radius: 1em;
+    background-color: var(--bgThird);
+    cursor: pointer;
+    transition: width .3s var(--easeOut), background-color .3s ease;
+}
+
+.carouselDot--active{
+    width: 1.8em;
+    background-color: var(--colAccent);
+}

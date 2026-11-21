@@ -1,25 +1,42 @@
+:root{
+    --colPrimary: #ffffff;
+    --colSecondary: #7a7a7a;
+    --colAccent: #0088ff;
+    --colAccentLight: #64b2f7;
+    --bgPrimary: #1f1f1f;
+    --bgSecondary: #121212;
+    --bgThird: #393939;
+    --glassBg: rgba(37, 37, 37, 0.7);
+    --glassBorder: rgba(61, 61, 61, 1);
+    --easeOut: cubic-bezier(0.22, 1, 0.36, 1);
+    --easeSpring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --gutter: clamp(1rem, 4vw, 2rem);
+}
+
 .bgcol__primary{
-    background-color: #1f1f1f;
+    background-color: var(--bgPrimary);
 }
 
 .bgcol__secondary{
-    background-color: #121212;
+    background-color: var(--bgSecondary);
 }
 
 .bgcol__third{
-    background-color: #393939;
+    background-color: var(--bgThird);
+}
+
+.bgcol__accent{
+    background-color: var(--colAccent);
 }
 
 .bgImg{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(images/index/aboutbg2.png);
+    background: url(images/Index/aboutbg2.webp) 0 0 / cover no-repeat, var(--bgSecondary);
 }
 
 .frostedGlass{
-    border: solid;
-    background: rgba(37, 37, 37, 0.7);
-    border-color: rgba(61, 61, 61, 1);
+    border: 3px solid var(--glassBorder);
+    background: var(--glassBg);
+    -webkit-backdrop-filter: blur(.5em);
     backdrop-filter: blur(.5em);
 }
 
@@ -31,66 +48,42 @@
     border-radius: 0.4em;
 }
 
-.bgcol__accent{
-    background-color: #0088ff;
-}
-
 .col__primary{
-    color: white;
+    color: var(--colPrimary);
 }
 
 .col__secondary{
-    color: #7a7a7a;
+    color: var(--colSecondary);
 }
 
 .col__accent{
-    color: #0088ff;
+    color: var(--colAccent);
 }
 
 .txt__tny{
-    font-size: 0.8em;
+    font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1rem);
 }
 
 .txt__sm{
-    font-size: 1.4em;
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.4rem);
 }
 
 .txt__med{
-    font-size: 2em;
+    font-size: clamp(1.2rem, 0.9rem + 1.2vw, 2rem);
 }
 
 .txt__lg{
-    font-size: 3em;
+    font-size: clamp(1.9rem, 1.2rem + 2.6vw, 3rem);
 }
 
 .txt__center{
-    text-align:center;
+    text-align: center;
 }
 
 .txt__left{
-    text-align:left;
+    text-align: left;
 }
 
 .txt_decor{
-    text-decoration:none;
+    text-decoration: none;
 }
-
-
-
-@media (max-width: 800px) {
-    .txt__sm{
-        font-size: 1.5em;
-    }
-
-    .txt__SMmed{
-        font-size: 1em;
-    }
-    
-    .txt__med{
-        font-size: 2em;
-    }
-    
-    .txt__lg{
-        font-size: 2.5em;
-    }
-  }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <meta name="description" content="Listen to my music.">
+    <meta name="theme-color" content="#1f1f1f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">
+    <script>document.documentElement.classList.add("hasJs")</script>
+    <script src="main.js" defer></script>
+    <script src="Tracks/tracks.js" defer></script>
+    <script src="visualizer.js" defer></script>
+    <script src="player.js" defer></script>
+    <script src="music.js" defer></script>
+</head>
+<body class="bgcol__secondary">
+    <header class="nav nav--top bgcol__primary">
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="index.html">Home</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="about.html">About</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="skills.html">Projects</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="music.html">Music</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="blog.html">Blog</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="contact.html">Contact</a>
+    </header>
+
+    <main class="section">
+        <h1 class="sectionHeader txt__lg col__primary txt__center typed">Music<span class="cursor">|</span></h1>
+        <p class="musicEmpty txt__sm col__secondary txt__center" hidden>No tracks yet. Check back soon!</p>
+        <div class="trackGrid"></div>
+    </main>
+
+    <template id="trackTemplate">
+        <article class="card trackCard bgcol__primary reveal">
+            <div class="trackCard__cover">
+                <img class="trackCard__img" alt="" width="512" height="512" loading="lazy" decoding="async" draggable="false">
+                <canvas class="trackCard__canvas" aria-hidden="true"></canvas>
+                <button class="trackCard__play" type="button" aria-label="Play">
+                    <span class="trackCard__icon"></span>
+                </button>
+            </div>
+            <div class="trackCard__body">
+                <h2 class="trackCard__title txt__med col__accent"></h2>
+                <p class="trackCard__desc txt__sm col__secondary"></p>
+                <div class="trackCard__controls">
+                    <input class="trackCard__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                    <span class="trackCard__time txt__tny col__secondary">0:00 / --:--</span>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <footer class="nav nav--bottom bgcol__primary">
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="index.html">Home</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="about.html">About</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="skills.html">Projects</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="music.html">Music</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="blog.html">Blog</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="contact.html">Contact</a>
+    </footer>
+</body>
+</html>

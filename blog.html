@@ -4,46 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
-    <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utils.css">
+    <meta name="description" content="Latest blog posts.">
+    <meta name="theme-color" content="#1f1f1f">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <script>document.documentElement.classList.add("hasJs")</script>
+    <script src="main.js" defer></script>
 </head>
 <body class="bgcol__secondary">
-    <!-- Horizontal Header -->
     <header class="nav nav--top bgcol__primary">
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="index.html">Home</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="about.html">About</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="skills.html">Projects</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="music.html">Music</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="blog.html">Blog</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="contact.html">Contact</a>
     </header>
 
     <div class="container">
-        <!-- Main Content Area -->
         <main>
             <section id="blog-posts" class="blog-section">
-                <h2>Latest Posts</h2>
+                <h2 class="typed">Latest Posts<span class="cursor">|</span></h2>
                 <div class="blog-list">
-                    <!-- Blog Post Template -->
-                    <div class="blog-item">
-                        <img src="images/art/zines.png" alt="Blog Post Image">
+                    <article class="blog-item reveal">
+                        <img src="images/art/zines.webp" alt="Handmade zines" width="720" height="404" loading="lazy" decoding="async">
                         <div class="blog-info">
                             <h3>DIGITAL ZINES!!!!</h3>
                             <p>THE GREATEST THING TO EXIST!</p>
                             <a href="BlogPosts/ZineBP.html">Read More</a>
                         </div>
-                    </div>
-                    <div class="blog-item">
-                        <img src="images/code/website.jpg" alt="Blog Post Image">
+                    </article>
+                    <article class="blog-item reveal">
+                        <img src="images/code/website.webp" alt="Code on a screen" width="720" height="404" loading="lazy" decoding="async">
                         <div class="blog-info">
                             <h3>The Journey of This site...</h3>
                             <p>The story of how this site came to be...</p>
                             <a href="BlogPosts/websiteBP.html">Read More</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </section>
         </main>
@@ -53,6 +55,7 @@
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="index.html">Home</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="about.html">About</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="skills.html">Projects</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="music.html">Music</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="blog.html">Blog</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="contact.html">Contact</a>
     </footer>

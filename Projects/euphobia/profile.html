@@ -4,75 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Euphobia Project Profile</title>
-    <link rel="stylesheet" href="../project.css">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../utils.css">
+    <meta name="theme-color" content="#1f1f1f">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../utils.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project.css">
+    <script>document.documentElement.classList.add("hasJs")</script>
+    <script src="../../main.js" defer></script>
+    <script src="../carousel.js" defer></script>
 </head>
 <body class="bgcol__secondary">
     <header class="nav nav--top bgcol__primary">
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../index.html">Home</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../about.html">About</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../skills.html">Projects</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../music.html">Music</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../blog.html">Blog</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../contact.html">Contact</a>
     </header>
 
-    <section class="section">
-        <div class="aboutContainer frostedGlass">
+    <main class="section">
+        <div class="aboutContainer frostedGlass reveal">
             <h2 class="sectionHeader txt__lg txt__left col__primary typedLeft">Euphobia<span class="cursor">|</span></h2>
             <div class="carouselContainer">
                 <div class="carousel">
-                    <img src="Images/image1.jpg" alt="Project Image 1" class="carouselImage">
+                    <img src="Images/image1.webp" alt="Project Image 1" class="carouselImage" decoding="async">
                 </div>
             </div>
             <h2 class="sectionHeader txt__lg txt__left col__primary typedLeft">Overview<span class="cursor">|</span></h2>
-            <p class="aboutCaption txt__med txt__left bgcol_ col__primary">Date: August 9, 2024</p>
+            <p class="aboutCaption txt__med txt__left col__primary">Date: August 9, 2024</p>
 
-            <p class="aboutCaption txt__med txt__left bgcol_ col__primary"><a href="https://www.youtube.com/watch?v=Jaec07WsyZQ&list=PLZs7xvVSG4UmmnqpSIYw-jYWpVEwYZdOH">Euphobia</a> is a Metal Band that incorporates symphonic and synth elements within their music in a unique way.</p>
+            <p class="aboutCaption txt__med txt__left col__primary"><a href="https://www.youtube.com/watch?v=Jaec07WsyZQ&list=PLZs7xvVSG4UmmnqpSIYw-jYWpVEwYZdOH" target="_blank" rel="noopener">Euphobia</a> is a Metal Band that incorporates symphonic and synth elements within their music in a unique way.</p>
             <h2 class="sectionHeader txt__lg txt__left col__accent typedLeft">Contributions:<span class="cursor">|</span></h2>
-            <p class="aboutCaption txt__med txt__left bgcol_ col__primary">I worked with other bandmates to write synth parts and tell a story within the music itself. I provided synth and symphonic elements to the other bandmate's metal instrumentation.</p>
+            <p class="aboutCaption txt__med txt__left col__primary">I worked with other bandmates to write synth parts and tell a story within the music itself. I provided synth and symphonic elements to the other bandmate's metal instrumentation.</p>
             <h2 class="sectionHeader txt__lg txt__left col__accent typedLeft">Motivation:<span class="cursor">|</span></h2>
-            <p class="aboutCaption txt__med txt__left bgcol_ col__primary">We all have made music within seperate projects for a while and decided to give it a shot together. We wanted to make metal music but add a fresh and unique twist to what has been done by so many before and around us.</p>
+            <p class="aboutCaption txt__med txt__left col__primary">We all have made music within seperate projects for a while and decided to give it a shot together. We wanted to make metal music but add a fresh and unique twist to what has been done by so many before and around us.</p>
             <h2 class="sectionHeader txt__lg txt__left col__accent typedLeft">Development:<span class="cursor">|</span></h2>
-            <p class="aboutCaption txt__med txt__left bgcol_ col__primary">We spent a lot of late nights working together to piece together parts together to tell the story we had planned. We also took time to work on the parts on our own time which allowed for creative freedoms to be taken and brought up to the rest of the band later.</p>
+            <p class="aboutCaption txt__med txt__left col__primary">We spent a lot of late nights working together to piece together parts together to tell the story we had planned. We also took time to work on the parts on our own time which allowed for creative freedoms to be taken and brought up to the rest of the band later.</p>
         </div>
-     </section>
+     </main>
 
     <footer class="nav nav--bottom bgcol__primary">
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../index.html">Home</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../about.html">About</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../skills.html">Projects</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../music.html">Music</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../blog.html">Blog</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../contact.html">Contact</a>
     </footer>
-
-    <script>// Simple Carousel Script
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("carouselImage");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 5000); // Change image every 10 seconds
-        }
-
-        document.querySelector('.prev').addEventListener('click', () => {
-            slideIndex -= 2;
-            if (slideIndex < 0) slideIndex = slides.length - 1;
-            showSlides();
-        });
-
-        document.querySelector('.next').addEventListener('click', () => {
-            showSlides();
-        });</script>
 </body>
 </html>

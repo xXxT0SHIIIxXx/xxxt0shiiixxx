@@ -1,14 +1,27 @@
-function showSection(sectionId) {
-    // Hide all sections
-    const sections = document.querySelectorAll('.project-section');
-    sections.forEach(section => section.classList.remove('active'));
+const sectionLinks = document.querySelectorAll(".vertical-nav a[data-section]");
+const defaultSection = "music-projects";
 
-    // Show the selected section
+function showSection(sectionId){
     const selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.add('active');
+    if (!selectedSection) return;
+    document.querySelectorAll(".project-section.active").forEach(section => section.classList.remove("active"));
+    selectedSection.classList.add("active");
+    sectionLinks.forEach(link => link.classList.toggle("active", link.dataset.section === sectionId));
 }
 
-// Set default section to show on page load
-document.addEventListener('DOMContentLoaded', () => {
-    showSection('music-projects');
-});
+function getHashSection(){
+    const match = [...sectionLinks].find(link => link.hash === location.hash);
+    return match ? match.dataset.section : defaultSection;
+}
+
+function onNavClick(event){
+    const link = event.target.closest("a[data-section]");
+    if (!link) return;
+    event.preventDefault();
+    history.replaceState(null, "", link.hash);
+    showSection(link.dataset.section);
+}
+
+document.querySelector(".vertical-nav").addEventListener("click", onNavClick);
+window.addEventListener("hashchange", () => showSection(getHashSection()));
+showSection(getHashSection());

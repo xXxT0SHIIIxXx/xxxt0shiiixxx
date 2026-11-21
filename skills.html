@@ -4,59 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Page</title>
-    <link rel="stylesheet" href="skills.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utils.css">
+    <meta name="description" content="Music, coding, and art projects.">
+    <meta name="theme-color" content="#1f1f1f">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skills.css">
+    <script>document.documentElement.classList.add("hasJs")</script>
+    <script src="main.js" defer></script>
+    <script src="skills.js" defer></script>
 </head>
 <body class="bgcol__secondary">
-    <!-- Horizontal Header -->
     <header class="nav nav--top bgcol__primary">
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="index.html">Home</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="about.html">About</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="skills.html">Projects</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="music.html">Music</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="blog.html">Blog</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="contact.html">Contact</a>
     </header>
 
     <div class="container">
-        <!-- Vertical Navigation Bar -->
-        <nav class="vertical-nav">
-            <ul>
-                <li><a href="#music" onclick="showSection('music-projects')">> Music <span class="cursor">|</span></a></li>
-                <li><a href="#coding" onclick="showSection('coding-projects')">> Coding <span class="cursor">|</span></a></li>
-                <li><a href="#design" onclick="showSection('design-projects')">> Art <span class="cursor">|</span></a></li>
+        <nav class="vertical-nav" aria-label="Project categories">
+            <ul class="reveal">
+                <li><a href="#music" data-section="music-projects">&gt; Music <span class="cursor">|</span></a></li>
+                <li><a href="#coding" data-section="coding-projects">&gt; Coding <span class="cursor">|</span></a></li>
+                <li><a href="#design" data-section="design-projects">&gt; Art <span class="cursor">|</span></a></li>
             </ul>
         </nav>
 
-        <!-- Main Content Area -->
         <main>
-            <!-- Music Projects Section -->
             <section id="music-projects" class="project-section">
                 <h2>Music Projects</h2>
                 <div class="project-list">
-                    <!-- Project Template -->
-                    <div class="project-item">
-                        <img src="images/music/toshi.png" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/music/toshi.webp" alt="xXx_T0SHIII_xXx artwork" width="720" height="720" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="Projects/toshiii/profile.html">xXx_T0SHIII_xXx</a>
                             <p>My most exciting and current music project</p>
                         </div>
                     </div>
 
-                    <!-- Copy and paste this block for more projects -->
-                    <div class="project-item">
-                        <img src="images/music/euphobia.jpg" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/music/euphobia.webp" alt="Euphobia band artwork" width="700" height="700" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="Projects/euphobia/profile.html">Euphobia</a>
                             <p>Metal Band I used to make music within.</p>
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <img src="images/music/TWY.png" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/music/TWY.webp" alt="The Wrecked Youth logo" width="556" height="255" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="Projects/wreckedyouth/profile.html">The Wrecked Youth</a>
                             <p>Indie Duo I was apart of. This is the story...</p>
@@ -65,13 +65,11 @@
                 </div>
             </section>
 
-            <!-- Coding Projects Section -->
             <section id="coding-projects" class="project-section">
                 <h2>Coding Projects</h2>
                 <div class="project-list">
-                    <!-- Project Template -->
-                    <div class="project-item">
-                        <img src="images/code/website.jpg" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/code/website.webp" alt="Code on a screen" width="720" height="404" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="BlogPosts/websiteBP.html">This Website</a>
                             <p>The Journey of coding this website mostly within one night.</p>
@@ -80,30 +78,27 @@
                 </div>
             </section>
 
-            <!-- Graphic Design Projects Section -->
             <section id="design-projects" class="project-section">
                 <h2>Graphic Design Projects</h2>
                 <div class="project-list">
-                    <!-- Project Template -->
-                    <div class="project-item">
-                        <img src="images/index/project1.png" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/Index/project1.webp" alt="Skies00 brand artwork" width="720" height="405" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="Projects/ClothingBrand/profile.html">Skies00 Streetwear Brand</a>
                             <p>Streetwear clothing brand I created all the assets for.</p>
                         </div>
                     </div>
 
-                    <!-- Copy and paste this block for more projects -->
-                    <div class="project-item">
-                        <img src="images/Index/project2.png" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/Index/project2.webp" alt="3D cannabis product ad" width="720" height="405" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="Projects/CannabisAd/profile.html">Cannabis Ad Mockups</a>
                             <p>Ads that I modeled and textured in 3D using Blender.</p>
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <img src="images/index/project3.png" alt="Project Image">
+                    <div class="project-item reveal">
+                        <img src="images/Index/project3.webp" alt="Y2K inspired logo designs" width="720" height="405" loading="lazy" decoding="async">
                         <div class="project-info">
                             <a href="Projects/Logos/profile.html">Logo Designs</a>
                             <p>Various Logo designs I created over the years for myself and others</p>
@@ -118,10 +113,9 @@
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="index.html">Home</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="about.html">About</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="skills.html">Projects</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="music.html">Music</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="blog.html">Blog</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="contact.html">Contact</a>
     </footer>
-
-    <script src="skills.js"></script>
 </body>
 </html>

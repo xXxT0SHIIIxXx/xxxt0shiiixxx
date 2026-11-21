@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Y2k Logo Designs Project Profile</title>
-    <link rel="stylesheet" href="../project.css">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../utils.css">
+    <meta name="theme-color" content="#1f1f1f">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../utils.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project.css">
+    <script>document.documentElement.classList.add("hasJs")</script>
+    <script src="../../main.js" defer></script>
+    <script src="../carousel.js" defer></script>
 </head>
 <body class="bgcol__secondary">
     <header class="nav nav--top bgcol__primary">
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../index.html">Home</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../about.html">About</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../skills.html">Projects</a>
+        <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../music.html">Music</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../blog.html">Blog</a>
         <a class="Text__nav Text__nav--top col__primary txt__tny" href="../../contact.html">Contact</a>
     </header>
 
-    <section class="section">
-        <div class="aboutContainer frostedGlass">
+    <main class="section">
+        <div class="aboutContainer frostedGlass reveal">
             <h2 class="sectionHeader txt__lg txt__left col__primary typedLeft">Y2K Inspired Logos<span class="cursor">|</span></h2>
             <div class="carouselContainer">
                 <div class="carousel">
-                    <img src="Images/image1.png" alt="Project Image 1" class="carouselImage">
-                    <img src="Images/image2.png" alt="Project Image 2" class="carouselImage">
+                    <img src="Images/image1.webp" alt="Project Image 1" class="carouselImage" decoding="async">
+                    <img src="Images/image2.webp" alt="Project Image 2" class="carouselImage" loading="lazy" decoding="async">
                 </div>
             </div>
             <h2 class="sectionHeader txt__lg txt__left col__primary typedLeft">Overview<span class="cursor">|</span></h2>
@@ -41,40 +46,15 @@
             <h2 class="sectionHeader txt__lg txt__left col__accent typedLeft">Development:<span class="cursor">|</span></h2>
             <p class="aboutCaption txt__med txt__left col__primary">Use of Grungy Texture layers to present a rough, used look. Commonly used Bold Outlines. Contains curvy, sharp and/or angular shapes.</p>
         </div>
-     </section>
+     </main>
 
     <footer class="nav nav--bottom bgcol__primary">
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../index.html">Home</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../about.html">About</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../skills.html">Projects</a>
+        <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../music.html">Music</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../blog.html">Blog</a>
         <a class="Text__nav Text__nav--bottom col__accent txt__tny" href="../../contact.html">Contact</a>
     </footer>
-
-    <script>// Simple Carousel Script
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("carouselImage");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 5000); // Change image every 10 seconds
-        }
-
-        document.querySelector('.prev').addEventListener('click', () => {
-            slideIndex -= 2;
-            if (slideIndex < 0) slideIndex = slides.length - 1;
-            showSlides();
-        });
-
-        document.querySelector('.next').addEventListener('click', () => {
-            showSlides();
-        });</script>
 </body>
 </html>
